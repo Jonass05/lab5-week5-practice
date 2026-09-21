@@ -72,8 +72,23 @@ int main() {
     // TODO (Part E): Create a LimitedEvent with dummy data.
     // TODO (Part E): Store the addresses of openEvent and your LimitedEvent
     // in two CampusEvent pointers. Call printDetails() through both pointers.
+    
+    LimitedEvent limitedEvent("Workshop", 20);
+    CampusEvent *eventPtr1 = &openEvent;
+    CampusEvent *eventPtr2 = &limitedEvent;
+
+    cout << "--- polymorphism ---" << endl;
+    eventPtr1->printDetails();
+    eventPtr2->printDetails();
+
     // TODO (Part E): Use largerValue with two int values and with two double values.
     // Print each result with a descriptive English label.
 
+    int int1 = 5, int2 = 10;
+    double double1 = 3.14, double2 = 2.71;
+
+    cout << "--- Larger values ---" << endl;
+    cout << "Higher attendance estimate: " << largerValue(int1, int2) << endl;
+    cout << "Higher event rating: " << largerValue(double1, double2) << endl;
     return 0;
 }
