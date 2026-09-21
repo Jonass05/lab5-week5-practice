@@ -1,9 +1,9 @@
 /*
  * Course: COEN 2220 - Programming 2
- * Name: [John Badillo Lamourt]
+ * Name: [John P. Badillo Lamourt]
  * Lab: Lab 5 - Week 5 Practice: OOP and Function Templates
  * Description: Inheritance, polymorphism, and function template practice
- * Due date: [Date]
+ * Due date: [september 21, 2026]
  */
 
 #include <iostream>
@@ -64,7 +64,7 @@ T largerValue(const T& a, const T& b) {
 int main() {
     CampusEvent openEvent("Coding Club Meeting");
 
-    cout << "--- Base event ---" << endl;
+    cout << "--- Base Event ---" << endl;
     openEvent.printDetails(); // This call uses CampusEvent::printDetails directly.
 
     // ===== Resolve these TODOs later (Part E) =====
@@ -77,7 +77,7 @@ int main() {
     CampusEvent *eventPtr1 = &openEvent;
     CampusEvent *eventPtr2 = &limitedEvent;
 
-    cout << "--- polymorphism ---" << endl;
+    cout << "--- Polymorphism ---" << endl;
     eventPtr1->printDetails();
     eventPtr2->printDetails();
 
@@ -90,5 +90,6 @@ int main() {
     cout << "--- Larger values ---" << endl;
     cout << "Higher attendance estimate: " << largerValue(int1, int2) << endl;
     cout << "Higher event rating: " << largerValue(double1, double2) << endl;
+    
     return 0;
 }
